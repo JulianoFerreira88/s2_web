@@ -61,7 +61,7 @@
         <tr>
             <td>
                 <h3>
-                    ANO
+                    Período
                 </h3>
             </td>
             <td>
