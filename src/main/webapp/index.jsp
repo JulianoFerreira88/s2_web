@@ -15,7 +15,7 @@
         <title>S2_web</title>
     </head>
     <body>
-        <h:header title="S2 Web"></h:header>
+        <h:header title="Sistema Web: Alto Grande"></h:header>
         <setores:setores setores="${setoresService.setores}"></setores:setores>
         <f:footer></f:footer>
         <script src="js/index.js" type="text/javascript"></script>

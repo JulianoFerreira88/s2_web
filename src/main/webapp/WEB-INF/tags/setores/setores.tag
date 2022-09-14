@@ -4,6 +4,7 @@
 <%@tag description="put the tag description here" pageEncoding="UTF-8"%>
 <%@taglib prefix="setor" tagdir="/WEB-INF/tags/setores/setor" %>
 <%@attribute name="setores" type="List<Setor>" required="true"%>
+
 <div>
     <c:forEach var="setor" items="${setores}">
         <setor:setor setor="${setor}"></setor:setor>

@@ -1,3 +1,4 @@
+
 function sliderElement(element) {
     let el = element;
 
@@ -12,6 +13,7 @@ function onSetorClick(id) {
 
 }
 sliderElement(document.getElementById('title'));
+
 
 
 

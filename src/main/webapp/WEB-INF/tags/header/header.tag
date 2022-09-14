@@ -28,13 +28,11 @@
     .header h2{
         padding: 10px;
         margin-left: 10px;
-        color: black;
+        color: white;
     }
 </style>
 <header class="header">
     <h2 id="title">${title}</h2>
-    <div>
-        <a href="#">DashBoard</a>
-    </div>
+
 </header>
 

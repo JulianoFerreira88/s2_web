@@ -11,6 +11,18 @@
 <%@attribute name="dados" type="List<String>" required="true" %>
 <%@attribute name="etiquetas" type="List<String>" required="true" %>
 <%@attribute name="tituloCategoria" required="true" %>
+<script>
+    function onChartClick() {
+
+        if (chart.config.type === 'line') {
+            chart.config.type = 'bar';
+            chart.update();
+        } else if (chart.config.type === 'bar') {
+            chart.config.type = 'line';
+            chart.update();
+        }
+    }
+</script>
 <style>
 
     .card-table{
@@ -70,15 +82,12 @@
     </table>
 </div>
 
-<canvas id="${id}" class="card"></canvas>
-
+<canvas id="chart" class="card" onclick="onChartClick()"></canvas>
 <script>
 
     var ctx = document.getElementById('${id}');
     var dados = [];
     var etiquetas = [];
-
-
 
     <c:forEach items="${etiquetas}" var="etiqueta">
     etiquetas.push('${etiqueta}');
@@ -87,8 +96,9 @@
     dados.push('${dado}');
     </c:forEach>
 
+
     var config = {
-        type: 'bar',
+        type: 'line',
         data: {
             labels: etiquetas,
             datasets: [{

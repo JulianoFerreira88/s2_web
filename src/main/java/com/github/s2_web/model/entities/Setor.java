@@ -14,9 +14,14 @@ import lombok.ToString;
 @AllArgsConstructor
 @EqualsAndHashCode
 @ToString
-public class Setor {
+public class Setor implements Comparable<Setor> {
 
     private Integer id;
     private String nome;
     private List<Relatorio> relatorios;
+
+    @Override
+    public int compareTo(Setor t) {
+        return this.getNome().compareTo(t.getNome());
+    }
 }

@@ -5,6 +5,7 @@ import com.github.s2_web.model.entities.Relatorio;
 import com.github.s2_web.model.entities.Setor;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class SetorDaoFile extends SetorDao {
@@ -29,8 +30,10 @@ public class SetorDaoFile extends SetorDao {
                 File rel = rels[j];
                 relatorios.add(new Relatorio(j, rel.getName().replace(".sql", "")));
             }
+            Collections.sort(relatorios);
             setores.add(new Setor(i, dir.getName(), relatorios));
         }
+        Collections.sort(setores);
         return setores;
     }
 }

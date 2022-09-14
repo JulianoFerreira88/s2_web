@@ -16,7 +16,7 @@
 </style>
 <div class="relatorio">
     <a href="relatorio?relatorio= ${relatorio.nome}&setor=${setor.nome} ">
-        <p><h5>${relatorio.nome}</h5></p>
+        <p>${relatorio.nome}</p>
     </a>    
 </div>
 
