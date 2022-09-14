@@ -24,7 +24,9 @@ public class ConnectionFilter implements Filter {
         sr.setAttribute("conexao", con);
 
         try {
+
             chain.doFilter(sr, sr1);
+
         } catch (Exception e) {
             System.out.println(e);
         }

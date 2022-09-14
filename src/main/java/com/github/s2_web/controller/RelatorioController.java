@@ -1,12 +1,14 @@
 package com.github.s2_web.controller;
 
 import com.github.s2_web.config.ServerConfig;
+import com.github.s2_web.log.Logger;
 import com.github.s2_web.model.entities.RelatorioData;
 import com.github.s2_web.model.service.RelatorioService;
 import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -38,6 +40,8 @@ public class RelatorioController extends HttpServlet {
             }
         }
 
+        Logger log = new Logger(relatorio, request.getRemoteAddr(), new Date(), new File(config.getProps().getProperty("server.file.log")));
+        log.log();
         request.getRequestDispatcher("/WEB-INF/pages/relatorio.jsp").forward(request, response);
     }
 
