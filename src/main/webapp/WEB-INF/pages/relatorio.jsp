@@ -8,6 +8,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width"/>
+        <link rel="icon" type="image" href="../../img/pig.png"/>
         <title>Relatório</title>
     </head>
     <body>

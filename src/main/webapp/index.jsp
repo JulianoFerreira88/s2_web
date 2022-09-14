@@ -9,10 +9,12 @@
 <jsp:useBean id="setoresService" scope="page" class="com.github.s2_web.model.service.SetorService" />
 <html lang="pt-br">
     <head>
+
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width"/>
         <script src="js/libs/Chart.js/chart.js" type="text/javascript"></script>
-        <title>S2_web</title>
+        <link rel="icon" type="image" href="img/pig.png"/>
+        <title>S2_Web</title>
     </head>
     <body>
         <h:header title="Sistema Web: Alto Grande"></h:header>
